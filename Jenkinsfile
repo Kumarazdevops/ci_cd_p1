@@ -4,21 +4,21 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'docker build -t myapp:latest .'
+                    bat 'docker build -t myapp:latest .'
                 }
             }
         }
         stage('Test') {
             steps {
                 script {
-                    sh 'docker run --rm myapp:latest ./run-tests.sh'
+                    bat 'docker run --rm myapp:latest ./run-tests.sh'
                 }
             }
         }
         stage('Deploy') {
             steps {
                 script {
-                    sh 'docker-compose up -d'
+                    bat 'docker-compose up -d'
                 }
             }
         }
