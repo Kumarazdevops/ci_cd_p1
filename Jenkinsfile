@@ -13,7 +13,7 @@
         }
         stage('Test') {
             steps {
-                sh 'docker run --rm myapp:latest ./run-tests.sh'
+                sh 'docker run --rm myapp:latest bash.sh'
             }
         }
         stage('Deploy') {
