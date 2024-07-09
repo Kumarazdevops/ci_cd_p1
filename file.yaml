@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    image: myapp:latest
+    ports:
+      - "80:3000"
+    volumes:
+      - ./data:/data
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
