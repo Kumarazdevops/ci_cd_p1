@@ -1,1 +1,1 @@
-"bash.sh"
+docker build -t myapp:latest .
