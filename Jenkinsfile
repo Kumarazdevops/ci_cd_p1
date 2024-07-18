@@ -8,7 +8,7 @@
         }
         stage ('Docker login'){
          steps{
-          bat 'docker login -u sravankumar0338'
+          bat 'docker login -u sravankumar0338 -p Kumar@1997'
          }
         }
         stage('Build') {
