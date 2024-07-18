@@ -13,7 +13,7 @@
         }
         stage('Build') {
             steps {
-                sh 'docker build -t myapp:latest .'
+                bat 'docker build -t myapp:latest .'
             }
         }
         stage('Test') {
