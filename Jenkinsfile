@@ -6,6 +6,11 @@
                 git branch: 'feature/updates', url: 'https://github.com/Kumarazdevops/ci_cd_p1.git'
             }
         }
+        stage ('Docker login'){
+         steps{
+          bat 'docker login -u sravankumar0338'
+         }
+        }
         stage('Build') {
             steps {
                 sh 'docker build -t myapp:latest .'
